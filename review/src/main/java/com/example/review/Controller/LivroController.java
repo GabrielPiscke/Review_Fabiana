@@ -2,7 +2,6 @@ package com.example.review.Controller;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +13,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-
 import com.example.review.DTO.LivroDTO;
 import com.example.review.Entity.Livro;
 import com.example.review.Service.LivroService;
@@ -33,7 +30,7 @@ public class LivroController {
         return ResponseEntity.status(HttpStatus.CREATED).body(livro);
     }
 
-    @GetMapping("{}")
+    @GetMapping("/{id}")
     public ResponseEntity<LivroDTO> getById (@PathVariable Long id){
         Optional<LivroDTO> livro = service.getById(id);
         
@@ -49,7 +46,7 @@ public class LivroController {
         return ResponseEntity.status(HttpStatus.OK).body(service.listarTodos());
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<LivroDTO> update (@PathVariable Long id, @RequestBody LivroDTO livroDTO){
         Optional<LivroDTO> livrOptional = service.update(id, livroDTO);
 
@@ -60,7 +57,7 @@ public class LivroController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete (@PathVariable Long id){
         if(service.delete(id)){
             return ResponseEntity.noContent().build();
