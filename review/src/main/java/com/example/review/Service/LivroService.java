@@ -62,8 +62,9 @@ public class LivroService {
         if(livro.isEmpty()){
             return Optional.empty();
         }
-        Livro livroUp = new Livro();
+        Livro livroUp = livro.get();
         livroUp.setPreco(dto.getPreco());
+        livroUp.setTitulo(dto.getTitulo());
         livroUp.setAutor(dto.getAutor());
         livroUp.setEditora(dto.getTitulo());
         livroUp.setAnoPublicacao(dto.getAnoPublicacao());
