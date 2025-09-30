@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Entity
 public class Livro {
+    private long id;
     private String titulo;
     private String autor;
     private String editora;
