@@ -1,4 +1,4 @@
-package com.example.review.dto;
+package com.example.review.DTO;
 
 import java.math.BigDecimal;
 
