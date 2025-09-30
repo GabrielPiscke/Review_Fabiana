@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Livro {
+    private Long id;
     private String titulo;
     private String autor;
     private String editora;
