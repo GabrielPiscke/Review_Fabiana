@@ -1,0 +1,7 @@
+com\example\review\Entity\Livro.class
+com\example\review\Config\WebConfig.class
+com\example\review\Service\LivroService.class
+com\example\review\Controller\LivroController.class
+com\example\review\Repository\LivroRepository.class
+com\example\review\ReviewApplication.class
+com\example\review\DTO\LivroDTO.class
