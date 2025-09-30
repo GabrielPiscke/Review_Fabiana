@@ -2,6 +2,7 @@ package com.example.review.DTO;
 
 import java.math.BigDecimal;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,9 +13,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LivroDTO {
  
-   @NotNull
+    @NotBlank
     private String titulo;
-    @NotNull
+    @NotBlank
     private String autor;
     private String editora;
     private int anoPublicacao;
