@@ -30,7 +30,7 @@ public class LivroController {
         return ResponseEntity.status(HttpStatus.CREATED).body(livro);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<LivroDTO> getById (@PathVariable Long id){
         Optional<LivroDTO> livro = service.getById(id);
         
@@ -46,7 +46,7 @@ public class LivroController {
         return ResponseEntity.status(HttpStatus.OK).body(service.listarTodos());
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<LivroDTO> update (@PathVariable Long id, @RequestBody LivroDTO livroDTO){
         Optional<LivroDTO> livrOptional = service.update(id, livroDTO);
 
@@ -57,7 +57,7 @@ public class LivroController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete (@PathVariable Long id){
         if(service.delete(id)){
             return ResponseEntity.noContent().build();
