@@ -33,7 +33,7 @@ public class LivroController {
         return ResponseEntity.status(HttpStatus.CREATED).body(livro);
     }
 
-    @GetMapping
+    @GetMapping("{}")
     public ResponseEntity<LivroDTO> getById (@PathVariable Long id){
         Optional<LivroDTO> livro = service.getById(id);
         
