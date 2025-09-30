@@ -66,7 +66,7 @@ public class LivroService {
         livroUp.setPreco(dto.getPreco());
         livroUp.setTitulo(dto.getTitulo());
         livroUp.setAutor(dto.getAutor());
-        livroUp.setEditora(dto.getTitulo());
+        livroUp.setEditora(dto.getEditora());
         livroUp.setAnoPublicacao(dto.getAnoPublicacao());
         Livro livroBd = repository.save(livroUp);
 
