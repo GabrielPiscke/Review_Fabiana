@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-import org.antlr.v4.runtime.misc.NotNull;
 
-import jakarta.persistence.Entity;
+import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
