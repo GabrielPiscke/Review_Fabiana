@@ -9,7 +9,7 @@ import com.example.review.Entity.Livro;
 import com.example.review.Service.LivroService;
 
 @RestController
-@RequestMapping("/livros")
+@RequestMapping
 public class LivroController {
 
     @Autowired
