@@ -37,7 +37,9 @@ public class LivroService {
         return dto;
     }
 
-    public List<Livro> listarTodos(){ return repository.findAll();}
+    public List<Livro> listarTodos(){
+        return repository.findAll();
+    }
 
     public Optional<LivroDTO> getById(long id){
     Optional<Livro> livro = repository.findById(id);
